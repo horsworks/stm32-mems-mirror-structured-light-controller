@@ -1,0 +1,30 @@
+# Build outputs
+/build/
+/cmake-build-*/
+/CMakeFiles/
+/CMakeCache.txt
+/compile_commands.json
+
+# Private experiment assets
+/App/Assets/
+
+# IDE / editor
+/.idea/
+/.vscode/
+*.code-workspace
+
+# STM32CubeMX local metadata
+/.mxproject
+
+# Firmware / intermediate binaries
+*.o
+*.obj
+*.d
+*.elf
+*.map
+*.hex
+*.bin
+
+# OS files
+.DS_Store
+Thumbs.db
