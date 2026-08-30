@@ -5,7 +5,7 @@
 #include "tim.h"
 #include "dac.h"
 
-// --- 子类：相机触发器 ---
+// --- 相机触发状态 ---
 typedef struct {
     int flag_counter;     // 当前计数
     int start_threshold;  // 开始触发计数
@@ -15,7 +15,7 @@ typedef struct {
     int stop_threshold;   // 停止计数 (用于判断本行是否结束)
 } CameraTrigger_t;
 
-// --- 主类：投影仪 ---
+// --- 投影仪控制 ---
 typedef struct {
     // 状态属性
     uint16_t cur_rows;

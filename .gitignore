@@ -5,11 +5,14 @@
 /CMakeCache.txt
 /compile_commands.json
 
-# Private experiment assets
-/App/Assets/
+# Experiment assets
+/App/Assets/*
+!/App/Assets/InitData_Timer.txt
+!/App/Assets/InitData_DAC.txt
 
 # IDE / editor
 /.idea/
+/.settings/
 /.vscode/
 *.code-workspace
 

@@ -20,11 +20,10 @@
 #define PROJ_AUTO_FLAG 1  // 自动切换标记
 
 // ==========================================
-//  内存管理 (STM32H7 特有)
+//  内存管理
 // ==========================================
-// 将大数组强制放入 AXI SRAM 并 32 字节对齐，以配合 DMA 和 Cache
-// 注意：需要在链接脚本 (.ld) 中确认 .AXI_SRAM_BUFFERS 是否存在，
-// 或者直接使用 .RxDecripSection 等 CubeMX 默认生成的段名，这里假设你已有该段。
+// 将大数组放入 AXI SRAM 并按 32 字节对齐，供 DMA 时序缓冲使用。
+// 链接脚本中已定义 .AXI_SRAM_BUFFERS 段。
 #define DATA_IN_AXI_SRAM  __attribute__((section(".AXI_SRAM_BUFFERS"))) __attribute__((aligned(32)))
 
 #endif // APP_CONFIG_H

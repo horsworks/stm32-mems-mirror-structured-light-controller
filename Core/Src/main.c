@@ -1,8 +1,4 @@
 /* USER CODE BEGIN Header */
-/**
-  * @file           : main.c
-  * @brief          : Main program body (OOP Refactored)
-  */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -77,8 +73,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  // MPU 设置非常关键，尤其是 H7 系列使用 AXI SRAM
-  MPU_Config();
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
@@ -108,7 +102,7 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  // 1. 初始化应用层对象 (Dependency Injection)
+  // 1. 初始化应用层对象
   Projector_Init(&g_proj);
   Comm_Init(&g_comm, &huart1);
 
